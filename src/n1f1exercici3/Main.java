@@ -1,4 +1,4 @@
-package n1exercici3;
+package n1f1exercici3;
 
 import java.util.Arrays;
 import java.util.List;
