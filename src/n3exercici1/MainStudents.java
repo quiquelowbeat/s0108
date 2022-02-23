@@ -40,13 +40,13 @@ public class MainStudents {
 		System.out.println("\nNota superior a 5 y no hacen PHP:\n");
 		
 		StudentList.stream()
-			.filter(s -> s.getScore() >= 5 && s.getGrade() != "PHP")
+			.filter(s -> s.getScore() >= 5 && !s.getGrade().equals("PHP")) // OJO!!! Cuidado con comparar strings usando ==.
 		    .forEach(System.out::println);
 		
 		System.out.println("\nMayores y hacen JAVA:\n");
 		
 		StudentList.stream()
-			.filter(s -> s.getAge() >= 18 && s.getGrade() == "Backend Java")
+			.filter(s -> s.getAge() >= 18 && s.getGrade().equals("Backend Java")) // OJO!!! Cuidado con comparar strings.
 			.forEach(System.out::println);
 		
 	}
